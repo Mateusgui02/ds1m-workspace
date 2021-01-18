@@ -6,32 +6,37 @@ public class App {
 
 	public static void main(String[] args) {
 	
-		Conta contaJoãoVitor;
-		Conta contaPedro;
+		Conta contaDaAna = new Conta();
+		Conta contaDoJoao = new Conta();
 		
-		contaJoãoVitor = new Conta();
-		contaPedro = new Conta();
+		contaDaAna.titular = "Ana Gomes";
+		contaDaAna.numero = "111-98";
+		contaDaAna.tipo = "Corrente";
+		contaDaAna.ativa = true;
+		contaDaAna.chequeEspecial = 200;
+		contaDaAna.depositar(100);
+		contaDaAna.consultarSaldo();
+		contaDaAna.depositar(30);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(50);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(500);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(50);
+		contaDaAna.consultarSaldo();
+		contaDaAna.sacar(80);
+		contaDaAna.consultarSaldo();
+		contaDaAna.depositar(100);
+		contaDaAna.consultarSaldo();
+		contaDaAna.getSaldo();
 		
-		//*** Conta do João
-		contaJoãoVitor.numero = "111-0";
-		contaJoãoVitor.titular = "João Vitor Araujo";
-		contaJoãoVitor.tipo ="Corente";
-		contaJoãoVitor.ativa = true;
-		contaJoãoVitor.depositar(100);
-		contaJoãoVitor.consultarSaldo();
-		contaJoãoVitor.depositar(300);
-		contaJoãoVitor.consultarSaldo();
-		contaJoãoVitor.depositar(-50);
-		contaJoãoVitor.consultarSaldo();
 		
-		
-		//*** Conta Pedro
-		contaPedro.numero = "222-0";
-		contaPedro.titular = "Pedro";
-		contaPedro.tipo ="Poupança";
-		contaPedro.ativa =true;
-		
-		
+		int a = somar(10, 5);
+	}
+	
+	public static int somar(int valor1,int valor2) {
+		int resultado = valor1 + valor2;
+		return resultado;
 	}
 
 }
